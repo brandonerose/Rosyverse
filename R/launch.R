@@ -1,4 +1,6 @@
 RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyREDCap")
+#' @title update_all
+#' @export
 update_all <-function(){
   was_updated_at_all <- F
   for(p in RosyPackages){

@@ -1,4 +1,11 @@
 RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyREDCap")
+#' @title load_all
+#' @export
+load_all <-function(){
+  for(p in RosyPackages){
+    library(p,character.only = T)
+  }
+}
 #' @title update_all
 #' @export
 update_all <-function(){

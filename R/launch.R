@@ -23,6 +23,6 @@ update_all <-function(){
   }
   if(was_updated_at_all) .rs.restartR()
 }
-check_Rosyverse_conflicts<-function(){
-  RosyDev::check_namespace_conflicts(RosyPackages)
+check_Rosyverse_conflicts<-function(others=NULL){
+  RosyDev::check_namespace_conflicts(c(RosyPackages,others))
 }

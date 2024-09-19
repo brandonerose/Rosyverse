@@ -23,8 +23,22 @@ update_all <-function(){
   }
   if(was_updated_at_all) .rs.restartR()
 }
+#' @title check_Rosyverse_conflicts
+#' @export
 check_Rosyverse_conflicts<-function(others=NULL){
-  RosyDev::check_namespace_conflicts(c(RosyPackages,others))
+  DF <- RosyDev::check_namespace_conflicts(c(RosyPackages,others))
+  if(is.null(DF))return()
+  DF <- DF[which(!DF$function_name%in%c(
+    "%>%",
+    "pkg_date",
+    "pkg_version",
+    "pkg_name",
+    ".__NAMESPACE__.",
+    ".__S3MethodsTable__.",
+    ".packageName"
+  )
+  ),]
+  return(DF)
 }
 #' @title get_logo
 #' @export

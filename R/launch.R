@@ -1,4 +1,4 @@
-RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyREDCap")
+RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyApp","RosyREDCap")
 #' @title load_all
 #' @export
 load_all <-function(){
@@ -12,7 +12,7 @@ update_all <-function(){
   was_updated_at_all <- F
   for(p in RosyPackages){
     version_before <- tryCatch(utils::packageVersion(p), error = function(e) NA)
-    remotes::install_github(paste0("brandonerose/",p))
+    remotes::install_github(paste0("brandonerose/",p),upgrade = "never")
     version_after <- tryCatch(utils::packageVersion(p), error = function(e) NA)
     if(!is.na(version_before)){
       was_updated <- version_before != version_after

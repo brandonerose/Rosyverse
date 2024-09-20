@@ -1,6 +1,6 @@
 Package: Rosyverse
 Title: What the Package Does (One Line, Title Case)
-Version: 0.1.0.9000
+Version: 0.1.0.9001
 Authors@R: 
     person("Brandon", "Rose", , "thecodingdocs@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0009-7813-1960", website = "TheCodingDocs.com"))

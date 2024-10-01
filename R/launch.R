@@ -8,7 +8,7 @@ load_all <-function(){
 }
 #' @title update_all
 #' @export
-update_all <-function(always_restart = T){
+update_all <-function(restart_after = F){
   was_updated_at_all <- F
   for(p in RosyPackages){
     version_before <- tryCatch(utils::packageVersion(p), error = function(e) NA)
@@ -21,7 +21,7 @@ update_all <-function(always_restart = T){
     }
     if(was_updated) was_updated_at_all <- T
   }
-  if(was_updated_at_all||always_restart) .rs.restartR()
+  if(was_updated_at_all&&restart_after) .rs.restartR()
 }
 #' @title check_Rosyverse_conflicts
 #' @export

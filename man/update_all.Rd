@@ -4,7 +4,7 @@
 \alias{update_all}
 \title{update_all}
 \usage{
-update_all(always_restart = T)
+update_all(restart_after = F)
 }
 \description{
 update_all

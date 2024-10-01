@@ -14,19 +14,11 @@ Depends:
 Imports: 
     magrittr,
     remotes,
-    RosyApp (>= 0.1.0.9000),
-    RosyDB (>= 0.0.0.9000),
     RosyDev (>= 0.1.0.9016),
-    RosyREDCap (>= 1.0.0.9016),
-    RosyUtils (>= 1.0.0.9012),
     tools,
     utils
-Remotes:  
-    github::brandonerose/RosyDev,
-    github::brandonerose/RosyUtils,
-    github::brandonerose/RosyDB,
-    github::brandonerose/RosyApp,
-    github::brandonerose/RosyREDCap
+Remotes: 
+    github::brandonerose/RosyDev
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

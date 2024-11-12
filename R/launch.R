@@ -8,7 +8,7 @@ load_all <-function(){
 }
 #' @title update_all
 #' @export
-update_all <-function(restart_after = F){
+update_all <-function(restart_after = T){
   was_updated_at_all <- F
   for(p in RosyPackages){
     version_before <- tryCatch(utils::packageVersion(p), error = function(e) NA)

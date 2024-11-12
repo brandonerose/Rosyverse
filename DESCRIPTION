@@ -14,7 +14,7 @@ Depends:
 Imports: 
     magrittr,
     remotes,
-    tools,
+    RosyDev,
     utils
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -2,7 +2,6 @@
 
 export("%>%")
 export(check_Rosyverse_conflicts)
-export(get_logo_paths)
 export(load_all)
 export(update_all)
 importFrom(magrittr,"%>%")

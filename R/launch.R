@@ -56,10 +56,3 @@ get_logo_paths <-function(name_vec = c("Rosyverse","TCD","TCDblack","TCDclear"))
   }
   return(named_list)
 }
-all_packages <- function(){
-  RosyDev:::.packageName
-  RosyUtils:::.packageName
-  RosyApp:::.packageName
-  RosyDB:::.packageName
-  RosyREDCap:::.packageName
-}

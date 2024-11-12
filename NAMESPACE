@@ -2,7 +2,6 @@
 
 export("%>%")
 export(RosyPackages)
-export(check_Rosyverse_conflicts)
 export(load_all)
 export(remove_all)
 export(update_all)

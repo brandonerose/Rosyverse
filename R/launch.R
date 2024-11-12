@@ -24,26 +24,11 @@ update_all <-function(restart_after = T){
   }
   if(was_updated_at_all&&restart_after) .rs.restartR()
 }
-#' @title check_Rosyverse_conflicts
-#' @export
-check_Rosyverse_conflicts<-function(others=NULL){
-  DF <- RosyDev::check_namespace_conflicts(c(RosyPackages,others))
-  if(is.null(DF))return()
-  return(DF)
-}
-all_package_deps <- function(){
-  RosyApp::`%>%`
-  RosyDev::`%>%`
-  RosyDB::`%>%`
-  RosyUtils::`%>%`
-  RosyREDCap::`%>%`
-  return(NULL)
-}
 #' @title remove_all
 #' @export
 remove_all <- function(){
   for(x in c(RosyPackages)){
     utils::remove.packages(x)
   }
-  RosyUtils::bullet_in_console("All Rosy packages removed!",bullet_type = "v")
+  message("All Rosy packages removed!")
 }

@@ -37,4 +37,11 @@ all_package_deps <- function(){
   RosyDB::`%>%`
   RosyUtils::`%>%`
   RosyREDCap::`%>%`
+  return(NULL)
+}
+remove_all <- function(){
+  for(x in c(RosyPackages)){
+    utils::remove.packages(x)
+  }
+  RosyUtils::bullet_in_console("All Rosy packages removed!",bullet_type = "v")
 }

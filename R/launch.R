@@ -39,6 +39,8 @@ all_package_deps <- function(){
   RosyREDCap::`%>%`
   return(NULL)
 }
+#' @title remove_all
+#' @export
 remove_all <- function(){
   for(x in c(RosyPackages)){
     utils::remove.packages(x)

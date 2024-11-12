@@ -40,19 +40,3 @@ check_Rosyverse_conflicts<-function(others=NULL){
   ),]
   return(DF)
 }
-#' @title get_logo
-#' @export
-get_logo_paths <-function(name_vec = c("Rosyverse","TCD","TCDblack","TCDclear")){
-  logo_folder <- system.file("logos",package = "Rosyverse")
-  logo_files <- logo_folder %>% list.files(full.names = T)
-  logo_files <- logo_files[which(endsWith(logo_files,".png"))]
-  allowed_names <- logo_files %>% basename() %>% tools::file_path_sans_ext() %>% gsub("hex-","",.)
-  named_list <- as.list(logo_files)
-  names(named_list) <- allowed_names
-  if(!is.null(name_vec)){
-    for(name in allowed_names){
-      if(!name %in% name_vec)named_list[[name]] <- NULL
-    }
-  }
-  return(named_list)
-}

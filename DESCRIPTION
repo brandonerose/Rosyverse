@@ -16,7 +16,7 @@ Imports:
     remotes,
     RosyApp,
     RosyDB,
-    RosyDev (>= 0.1.0.9016),
+    RosyDev,
     RosyREDCap,
     RosyUtils,
     tools,

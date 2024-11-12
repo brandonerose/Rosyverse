@@ -1,3 +1,4 @@
+#' @export
 RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyApp","RosyREDCap")
 #' @title load_all
 #' @export
@@ -28,15 +29,12 @@ update_all <-function(restart_after = T){
 check_Rosyverse_conflicts<-function(others=NULL){
   DF <- RosyDev::check_namespace_conflicts(c(RosyPackages,others))
   if(is.null(DF))return()
-  DF <- DF[which(!DF$function_name%in%c(
-    "%>%",
-    "pkg_date",
-    "pkg_version",
-    "pkg_name",
-    ".__NAMESPACE__.",
-    ".__S3MethodsTable__.",
-    ".packageName"
-  )
-  ),]
   return(DF)
+}
+all_package_deps <- function(){
+  RosyApp::`%>%`
+  RosyDev::`%>%`
+  RosyDB::`%>%`
+  RosyUtils::`%>%`
+  RosyREDCap::`%>%`
 }

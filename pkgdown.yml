@@ -1,0 +1,8 @@
+pandoc: 3.1.11
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles: {}
+last_built: 2024-12-16T22:29Z
+urls:
+  reference: https://brandonerose.github.io/Rosyverse/reference
+  article: https://brandonerose.github.io/Rosyverse/articles

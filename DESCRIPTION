@@ -7,7 +7,8 @@ Authors@R:
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
-URL: https://github.com/brandonerose/Rosyverse
+URL: https://github.com/brandonerose/Rosyverse,
+    https://brandonerose.github.io/Rosyverse/
 BugReports: https://github.com/brandonerose/Rosyverse/issues
 Depends: 
     R (>= 2.10)

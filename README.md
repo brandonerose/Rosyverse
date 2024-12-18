@@ -14,7 +14,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 Rosyverse is an evolving pre-CRAN set of packages maintained by Brandon
 Rose, MD, MPH. It is important to continue to run
 `Rosyverse::update_all()` while you are using this set of related
-packages. Please out if there are issues with installation,
+packages. Please reach out if there are issues with installation,
 documentation, or packages.
 
 ``` r
@@ -27,7 +27,7 @@ Rosyverse::load_all() #load all Rosyverse packages!
 ```
 
 If you have any issues above download the most recent version of R at
-RStudtio and update all packages in RStudio. See
+RStudio and update all packages in RStudio. See
 [thecodingdocs.com/r/getting-started](https://www.thecodingdocs.com/r/getting-started "R Getting Started").
 
 ## Rosyverse Installation

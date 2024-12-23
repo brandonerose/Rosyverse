@@ -13,7 +13,7 @@ update_all <-function(restart_after = T){
   was_updated_at_all <- F
   for(p in RosyPackages){
     version_before <- tryCatch(utils::packageVersion(p), error = function(e) NA)
-    remotes::install_github(paste0("brandonerose/",p),upgrade = "never")
+    remotes::install_github(paste0("brandonerose/",p),upgrade = "never",build_vignettes = T, build_manual = T)
     version_after <- tryCatch(utils::packageVersion(p), error = function(e) NA)
     if(!is.na(version_before)){
       was_updated <- version_before != version_after

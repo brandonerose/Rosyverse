@@ -1,5 +1,5 @@
 #' @export
-RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyApp","RosyREDCap","REDCapDB")
+RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyApp","RosyREDCap","REDCapDB","RosyRx","rosymap")
 #' @title load_all
 #' @export
 load_all <-function(){

@@ -1,5 +1,15 @@
 #' @export
-RosyPackages <- c("Rosyverse","RosyDev","RosyUtils","RosyDB","RosyApp","RosyREDCap","REDCapDB","RosyRx","rosymap")
+RosyPackages <- c(
+  "Rosyverse",
+  "RosyDev",
+  "RosyUtils",
+  # "RosyDB",
+  "RosyApp",
+  "RosyREDCap",
+  "REDCapSync",
+  "RosyRx",
+  "rosymap"
+)
 #' @title load_all
 #' @export
 load_all <-function(){
@@ -14,7 +24,7 @@ update_all <-function(restart_after = T){
   for(p in RosyPackages){
     version_before <- tryCatch(utils::packageVersion(p), error = function(e) NA)
     repo <- "brandonerose"
-    if(p%in%c("REDCapDB","RosyREDCap"))repo <- "thecodingdocs"
+    if(p%in%c("REDCapSync","RosyREDCap"))repo <- "thecodingdocs"
     remotes::install_github(paste0(repo,"/",p),upgrade = "never",build_vignettes = T, build_manual = T)
     version_after <- tryCatch(utils::packageVersion(p), error = function(e) NA)
     if(!is.na(version_before)){

@@ -1,5 +1,5 @@
 Package: Rosyverse
-Title: What the Package Does (One Line, Title Case)
+Title: Collection of R Packages Maintained by Brandon Rose
 Version: 0.1.0.9004
 Authors@R: 
     person("Brandon", "Rose", , "thecodingdocs@gmail.com", role = c("aut", "cre"),

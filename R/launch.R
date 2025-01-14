@@ -14,25 +14,25 @@ RosyPackages <- c(
 #' @export
 load_all <-function(){
   for(p in RosyPackages){
-    library(p,character.only = T)
+    library(p,character.only = TRUE)
   }
 }
 #' @title update_all
 #' @export
-update_all <-function(restart_after = T){
-  was_updated_at_all <- F
+update_all <-function(restart_after = TRUE){
+  was_updated_at_all <- FALSE
   for(p in RosyPackages){
     version_before <- tryCatch(utils::packageVersion(p), error = function(e) NA)
     repo <- "brandonerose"
     if(p%in%c("REDCapSync","RosyREDCap"))repo <- "thecodingdocs"
-    remotes::install_github(paste0(repo,"/",p),upgrade = "never",build_vignettes = T, build_manual = T)
+    remotes::install_github(paste0(repo,"/",p),upgrade = "never")
     version_after <- tryCatch(utils::packageVersion(p), error = function(e) NA)
     if(!is.na(version_before)){
       was_updated <- version_before != version_after
     }else{
-      was_updated <- T
+      was_updated <- TRUE
     }
-    if(was_updated) was_updated_at_all <- T
+    if(was_updated) was_updated_at_all <- TRUE
   }
   if(was_updated_at_all&&restart_after) .rs.restartR()
 }

@@ -11,3 +11,5 @@ $run_dev.*
 ^docs$
 ^pkgdown$
 ^\.github$
+^\.positai$
+^\.claude$

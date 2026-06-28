@@ -9,7 +9,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/brandonerose/Rosyverse/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/brandonerose/Rosyverse/blob/main/DESCRIPTION)
 
 Rose B (2026). *Rosyverse: Collection of R Packages Maintained by
 Brandon Rose*. R package version 0.1.0.9004,
